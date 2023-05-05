@@ -7,8 +7,8 @@ export const ProductCard = (product) => {
 		<img src={img} alt="" />
 		<h3>{name}</h3>
 		
-		<p>Price :{price}</p>
-		<p>Ratings:{ratings} Stars</p>
+		<p>Price : {price}$</p>
+		<p>Ratings : {ratings} Star</p>
 
 		<button >Add To Cart</button>
 			
