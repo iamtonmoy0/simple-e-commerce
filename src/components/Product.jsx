@@ -8,11 +8,12 @@ export const Product = () => {
 		fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
 		.then(res=>res.json())
 		.then(data=>setProducts(data))
-	},[])
+	},[]);
+	
 	return (
 		<div className="product">
 		<div className="product-section">
-                                  {products.map(product=> <ProductCard key={product.id} product={product}/>)}
+                                  {products.map(product=> <ProductCard key={product.id} product={product} />)}
 			</div>
 			<div className="order-section">
 				<h3>Order Summery</h3>

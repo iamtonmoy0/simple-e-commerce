@@ -1,7 +1,10 @@
 import './ProductCard.css'
-
+import { handleAddToCart } from '../utilities/fakedb';
 export const ProductCard = (product) => {
+	
 	const{name,img,price,ratings}=product.product;
+	
+
 	return (
 		<div className='product-card'>
 		<img src={img} alt="" />
@@ -10,7 +13,7 @@ export const ProductCard = (product) => {
 		<p>Price : {price}$</p>
 		<p>Ratings : {ratings} Star</p>
 
-		<button >Add To Cart</button>
+		<button onClick={()=>handleAddToCart(product)}>Add To Cart</button>
 			
 			
 		</div>
