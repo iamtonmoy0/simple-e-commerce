@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './Product.css'
+import { ProductCard } from './ProductCard';
 
 export const Product = () => {
 	const [products,setProducts]=useState([])
@@ -10,9 +11,8 @@ export const Product = () => {
 	},[])
 	return (
 		<div className="product">
-			<div className="product-section">
-                          <h3>Total {products.length} Products Available</h3>
- 
+		<div className="product-section">
+                                  {products.map(product=> <ProductCard key={product.id} product={product}/>)}
 			</div>
 			<div className="order-section">
 				<h3>Order Summery</h3>

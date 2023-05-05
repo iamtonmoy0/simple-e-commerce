@@ -1,0 +1,9 @@
+
+.product-card img{
+	height: 268px;
+	width: 268px;
+	padding-top: 15px;
+}
+.product-card button{
+	background-color: rgb(231, 194, 26);
+}
