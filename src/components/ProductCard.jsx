@@ -1,9 +1,8 @@
 import './ProductCard.css'
-import { handleAddToCart } from '../utilities/fakedb';
-export const ProductCard = (product) => {
-	
-	const{name,img,price,ratings}=product.product;
-	
+export const ProductCard = (props) => {
+	const{name,img,price,ratings}=props.product;
+	 const handleAddToCart = props.handleAddToCart;
+
 
 	return (
 		<div className='product-card'>
@@ -13,7 +12,7 @@ export const ProductCard = (product) => {
 		<p>Price : {price}$</p>
 		<p>Ratings : {ratings} Star</p>
 
-		<button onClick={()=>handleAddToCart(product)}>Add To Cart</button>
+		<button onClick={()=>handleAddToCart(props.product)}>Add To Cart</button>
 			
 			
 		</div>
