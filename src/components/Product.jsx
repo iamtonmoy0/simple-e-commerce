@@ -25,7 +25,7 @@ const [cart,setCart]=useState([])
 			</div>
 			<div className="order-section">
 				<h3>Order Summery</h3>
-				<p>{cart.length}Item added</p>
+				<p>{cart.length} Item added</p>
 			</div>
 		</div>
 	);
