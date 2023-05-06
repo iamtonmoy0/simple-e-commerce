@@ -1,0 +1,7 @@
+.cart-info p{
+	align-items: start;
+}
+.cart-info{
+	position: sticky;
+	top: 0;
+}

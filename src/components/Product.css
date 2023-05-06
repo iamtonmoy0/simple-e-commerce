@@ -9,4 +9,6 @@
 }
 .order-section{
 	background-color: rgb(238, 194, 114);
+	position: sticky;
+	top: 0;
 }
