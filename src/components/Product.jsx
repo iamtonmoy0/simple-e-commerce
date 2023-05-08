@@ -32,7 +32,12 @@ const [cart,setCart]=useState([])
 		setCart(savedCart)
 	},[products])
 	const handleAddToCart=(product)=>{
-    const newCart = [...cart, product];
+    const newCart = [];
+    const exist=cart.find(pd=>pd.id===product.id)
+    if(!exist){
+	product.quantity=1;
+	newCart=[...cart,product]
+    }
         setCart(newCart);
 	addToDb(product.id)
 	}
