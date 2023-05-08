@@ -18,12 +18,18 @@ const [cart,setCart]=useState([])
 	// reloading products from local storage
 	useEffect(()=>{
 		const storedData=getShoppingCart()
+		const savedCart=[];
 		for(const id in storedData){
 			const addedProduct=products.find(product=>product.id ===id);	
-			const quantity=storedData[id]
+			if(addedProduct){
+				const quantity=storedData[id]
 			addedProduct.quantity = quantity
-			console.log(addedProduct)
+			savedCart.push(addedProduct)
+		
+			}
+			
 		}
+		setCart(savedCart)
 	},[products])
 	const handleAddToCart=(product)=>{
     const newCart = [...cart, product];
