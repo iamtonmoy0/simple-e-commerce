@@ -15,10 +15,16 @@ const [cart,setCart]=useState([])
 		.then(res=>res.json())
 		.then(data=>setProducts(data))
 	},[]);
+	// reloading products from local storage
 	useEffect(()=>{
 		const storedData=getShoppingCart()
-		console.log(storedData)
-	},[])
+		for(const id in storedData){
+			const addedProduct=products.find(product=>product.id ===id);	
+			const quantity=storedData[id]
+			addedProduct.quantity = quantity
+			console.log(addedProduct)
+		}
+	},[products])
 	const handleAddToCart=(product)=>{
     const newCart = [...cart, product];
         setCart(newCart);
